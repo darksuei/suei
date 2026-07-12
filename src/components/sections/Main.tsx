@@ -16,7 +16,7 @@ const Main = forwardRef((_props: any, ref: any) => {
 
   return (
     <InView as='div' onChange={(inView, entry) => handleInView(inView, entry)}>
-      <section className='w-11/12 md:mx-auto h-screen box-border relative' ref={ref}>
+      <section className='w-11/12 md:mx-auto h-[100dvh] box-border relative' ref={ref}>
         <TopNav />
         <Me />
         <Intro />

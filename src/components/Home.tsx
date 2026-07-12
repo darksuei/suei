@@ -25,6 +25,7 @@ const Home = () => {
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLoading(false);
+      console.log(`\x1b[1mLooking for something? :)\x1b[0m`);
     }, 1400);
     return () => clearTimeout(timerId);
   }, []);
@@ -45,19 +46,11 @@ const Home = () => {
               contactScrollRef={contactScrollRef}
             />
           </div>
-          <div className='w-screen flex flex-col box-border' ref={doc}>
-            <Fragment>
-              <Main ref={homeScrollRef} />
-            </Fragment>
-            <Fragment>
-              <About ref={aboutScrollRef} />
-            </Fragment>
-            <Fragment>
-              <Experience ref={expScrollRef} />
-            </Fragment>
-            <Fragment>
-              <Projects ref={projScrollRef} />
-            </Fragment>
+          <div className='w-screen flex flex-col box-border p-[12px]' ref={doc}>
+            <Main ref={homeScrollRef} />
+            <About ref={aboutScrollRef} />
+            <Experience ref={expScrollRef} />
+            <Projects ref={projScrollRef} />
             <Contact ref={contactScrollRef} />
           </div>
         </Fragment>

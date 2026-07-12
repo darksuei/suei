@@ -15,6 +15,22 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+/* This will affect the scrollbar globally */
+/* For WebKit-based browsers (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8892b0;
+  border-radius: 5px;
+}
+
 .nav-right {
   height: 100%;
 }

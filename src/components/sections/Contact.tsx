@@ -28,7 +28,7 @@ const Contact = forwardRef((_props: any, ref: any) => {
         },
         {
           y: 0,
-          duration: 0.75,
+          duration: 0.5,
           opacity: 1,
           ease: "power2.inOut",
           stagger: 0.15,
@@ -42,7 +42,7 @@ const Contact = forwardRef((_props: any, ref: any) => {
   }, [viewChanged]);
 
   return (
-    <InView as='div' threshold={0.4} onChange={(inView, entry) => handleInView(inView, entry)}>
+    <InView as='div' onChange={(inView, entry) => handleInView(inView, entry)}>
       <section
         className={`w-11/12 mx-auto flex h-screen md:h-screen items-center justify-center text-primary`}
         ref={ref}
@@ -56,15 +56,17 @@ const Contact = forwardRef((_props: any, ref: any) => {
             </p>
             <p className='hidden md:block animate_element'>Feel free to shoot me an email!</p>
           </div>
-          <Link
-            target='_blank'
-            className='w-fit h-fit relative mt-2 animate_element'
-            href='mailto:folarinraphael@outlook.com'
-          >
-            <div className='py-2.5 rounded-sm px-14 border-2 border-secondary text-secondary main-btn text-base'>
-              Say Hi
-            </div>
-          </Link>
+          <div className='animate_element'>
+            <Link
+              target='_blank'
+              className='w-fit h-fit relative mt-2'
+              href='mailto:folarinraphael@outlook.com'
+            >
+              <div className='py-2.5 rounded-sm px-14 border-2 border-secondary text-secondary main-btn text-base'>
+                Say Hi
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
     </InView>

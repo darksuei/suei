@@ -29,7 +29,7 @@ export default function Intro() {
         tl.fromTo(
           ".el",
           {
-            y: -15,
+            y: 15,
             opacity: 0,
           },
           {
@@ -59,7 +59,7 @@ export default function Intro() {
         <p className='hover:cursor-pointer w-fit'>Folarin Raphael</p>
       </div>
       <h2 className='text-secondary text-sm md:text-lg font-semibold el w-10/12'>
-        CLOUD NATIVE SOFTWARE ENGINEER
+        FULL-STACK SOFTWARE ENGINEER
       </h2>
       <p className='w-10/12 md:w-8/12 text-xs md:text-base el'>
         I build scalable, reliable software with exceptional user experiences. I specialize in diagnosing and

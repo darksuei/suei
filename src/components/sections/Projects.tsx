@@ -27,11 +27,14 @@ const Projects = forwardRef((_props: any, ref: any) => {
     e.preventDefault();
     setViewMore(!viewMore);
 
-    setShowcase(showcase.length === projects.length ? [...projects, ...moreprojects] : projects);
+    setShowcase(showcase.length <= projects.length ? [...projects, ...moreprojects] : projects);
   };
 
   const getShowcase = () => {
     if (width > 768 && width < 991) {
+      if (viewMore) {
+        return showcase.slice(0, 4);
+      }
       return showcase.slice(0, 2);
     }
     return showcase;
