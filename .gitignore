@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# custom
+**/bin
+**/.claude
+
+# applications
+**/applications/**
+**/documents/*
+**/la-bomb/*
